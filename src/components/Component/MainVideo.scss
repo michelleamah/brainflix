@@ -1,0 +1,53 @@
+@use "../../styles/partials/_fonts.scss" as *;
+@use "../../styles/partials/_variables.scss" as *;
+@use "../../styles/partials/_mixins.scss" as *;
+
+video {
+    width: 100vw;
+}
+
+.main {
+    font-family: 'avenir-regular';
+    &__details{
+    margin-right: 1rem;
+    margin-left: 1rem;
+    }
+
+    &__title {
+        font-family: 'avenir-bold';
+        color: $brainflix-black;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid $mercury;
+    }
+    &__info {
+        display: flex;
+        width: 100%;
+    }
+    &__channel {
+        font-family: 'avenir-demi';
+    }
+    &__likes, &__views {
+        padding-right: 1rem;
+        padding-left: 0.5rem;
+        color: $silver;
+    }
+
+    &__views-icon {
+        padding-left: 2rem;
+    }
+
+    &__info1 {
+        display: flex;
+    }
+
+    &__timestamp {
+        color: $silver;
+
+    }
+    &__description {
+        border-top: 1px solid $mercury;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid $mercury;
+    }
+}
