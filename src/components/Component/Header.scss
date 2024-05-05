@@ -1,0 +1,103 @@
+@use "../../styles/partials/_fonts.scss" as *;
+@use "../../styles/partials/_variables.scss" as *;
+@use "../../styles/partials/_mixins.scss" as *;
+
+.header {
+    align-items: center;
+    padding: 1rem;
+    background-color: $white;
+    font-family: 'avenir-regular';
+  
+    &__logo {
+      text-align: center;
+    }
+  
+    &__logo-image {
+      width: 7rem;
+    }
+
+    &__flex-container {
+        display: flex; 
+        justify-content: center;
+    
+        .header__avatar-image {
+            height: 3rem;
+            width: 3rem;
+            border-radius: 50%;
+        }
+      }
+  
+    &__search {
+      display: flex;
+      align-items: center;
+    }
+  
+    &__search-input {
+      padding: 0.5rem;
+      margin-right: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  
+    &__search-button {
+      padding: 0.5rem 1rem;
+      background-color: $mercury;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+  
+      &:hover {
+        background-color: $brainflix-blue;
+      }
+    }
+    &__upload {
+        color: $white;
+        font-family: 'avenir-demi';
+        display: flex;
+        justify-content: center;
+    }
+    &__upload-icon {
+        width: 1.5rem;
+        background-color: $brainflix-blue;
+        padding-left: 0.5rem;
+
+    }
+    &__upload-text {
+        background-color: $brainflix-blue;
+        padding-left: 3.5rem;
+        padding-right: 3.5rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    @include tablet {
+        display: flex;
+        position: relative;
+        &__logo-image {
+            padding-left: 2rem;
+        }
+        &__search {
+            display: flex;
+          }
+
+        &__avatar {
+            position: absolute;
+            right: 5%;
+        }
+        &__upload {
+            padding-left: 1rem;
+        }
+
+        &__upload-icon {
+            background-color: $brainflix-blue;
+    
+        }
+        &__upload-text {
+            background-color: $brainflix-blue;
+            padding: 0.5rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+    }
+  }
