@@ -23,7 +23,7 @@ video {
     font-family: "avenir-bold";
     color: $brainflix-black;
     padding-bottom: 1rem;
-    border-bottom: 1px solid $mercury;
+    border-bottom: 0.1rem solid $mercury;
   }
   &__info {
     display: flex;
@@ -51,28 +51,28 @@ video {
     color: $silver;
   }
   &__description {
-    border-top: 1px solid $mercury;
+    border-top: 0.1rem solid $mercury;
     padding-top: 2rem;
     padding-bottom: 2rem;
-    border-bottom: 1px solid $mercury;
+    border-bottom: 0.1rem solid $mercury;
   }
   @include tablet {
     &__flex {
-        display: flex;
+      display: flex;
     }
     &__info {
-        margin-right: 4rem;
-        justify-content: space-between;
+      margin-right: 4rem;
+      justify-content: space-between;
     }
     &__info1 {
-        margin-right: 10rem;
-        justify-content: space-between;
+      margin-right: 10rem;
+      justify-content: space-between;
     }
     &__channel {
-        margin-right: 4rem;
+      margin-right: 4rem;
     }
     &__likes {
-        margin-right: 2rem;
+      margin-right: 2rem;
     }
   }
   @include desktop {
@@ -80,10 +80,10 @@ video {
     flex-direction: column;
     align-items: center;
     &__channel {
-        margin: 0;
+      margin: 0;
     }
-    &__info1{
-        margin: 0;
+    &__info1 {
+      margin: 0;
     }
     &__video-container {
       width: 70%;
@@ -93,8 +93,9 @@ video {
       width: 100%;
     }
     &__details {
-        width: 60%;
-        align-self: flex-start;
+      width: 60%;
+      align-self: flex-start;
+      background-color: $white;
     }
   }
 }
