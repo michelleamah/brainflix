@@ -20,7 +20,7 @@ function Header() {
         </div>
         <div className="header__upload">
             <img src={upload} alt="Upload" className="header__upload-icon" />
-            <div className="header__upload-text">UPLOAD</div>
+            UPLOAD
       </div>
     </header>
   );

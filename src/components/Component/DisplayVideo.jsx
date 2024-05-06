@@ -1,15 +1,18 @@
 import React from 'react';
-import videoData from '../../Data/videos.json';
-import './DisplayVideo.scss'; 
+import './DisplayVideo.scss';
 
-function DisplayVideos() {
-  const otherVideos = videoData.slice(1);
+function DisplayVideo({ videoData, mainVideo, onVideoClick }) {
+  const handleClick = (video) => {
+    onVideoClick(video);
+  };
+
+  const filteredVideoData = videoData.filter(video => video.id !== mainVideo.id);
 
   return (
     <div className="video-container">
-    <p className="next-videos">NEXT VIDEOS</p>
-      {otherVideos.map(video => (
-        <div key={video.id} className="video">
+      <p className="next-videos">NEXT VIDEOS</p>
+      {filteredVideoData.map(video => (
+        <div key={video.id} className="video" onClick={() => handleClick(video)}>
           <img src={video.image} alt={video.title} className="video__thumbnail" />
           <div className="video__info">
             <h2 className="video__title">{video.title}</h2>
@@ -21,4 +24,4 @@ function DisplayVideos() {
   );
 }
 
-export default DisplayVideos;
+export default DisplayVideo;
