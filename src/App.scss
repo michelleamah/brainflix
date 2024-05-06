@@ -2,3 +2,12 @@
 @use "./styles/partials/_variables.scss" as *;
 @use "./styles/partials/mixins.scss" as *;
 
+.App {
+    flex-direction: column; 
+  }
+  
+  @include desktop {
+    .content {
+        display: flex;
+    }
+  }

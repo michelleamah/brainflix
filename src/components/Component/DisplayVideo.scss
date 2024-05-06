@@ -9,6 +9,12 @@
     width: 100%;
     margin-left: 1rem;
     margin-right: 1rem;
+    @include desktop {
+      margin-top: -20rem;
+      margin-right: 2rem;
+      border-left: 0.1rem solid $mercury;
+      padding-left: 1rem;
+    }
   }
 
 .next-videos {

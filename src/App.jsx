@@ -17,8 +17,12 @@ function App() {
     <div className="App">
       <Header />
       <MainVideo mainVideo={mainVideo} />
-      <Comments comments={mainVideo.comments} />
-      <DisplayVideo videoData={videoDetails} mainVideo={mainVideo} onVideoClick={handleVideoClick} />
+      <div className="content">
+        <div className="content-flex">
+          <Comments comments={mainVideo.comments} />
+        </div>
+        <DisplayVideo videoData={videoDetails} mainVideo={mainVideo} onVideoClick={handleVideoClick} />
+      </div>
     </div>
   );
 }

@@ -8,6 +8,9 @@
     font-family: 'avenir-demi';
     margin-left: 1rem;
     margin-right: 1rem;
+    @include desktop {
+      align-items: flex-start;
+    }
   
     .comments {
       margin-top: 2rem;
@@ -45,6 +48,9 @@
           border-width: 0.15rem;
           border-radius: 0.2rem;
           background-color: $alabaster;
+          @include desktop {
+            width: 55vw;
+          }
         }
       }
   
@@ -86,6 +92,7 @@
         &-namedate {
           display: flex;
         }
+
       }
     }
   }
@@ -99,6 +106,7 @@
     border-radius: 0.2rem;
     width: 100%;
     justify-content: center;
+
     &__icon {
       padding: 1rem;
     }
