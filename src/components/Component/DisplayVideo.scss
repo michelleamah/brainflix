@@ -29,18 +29,18 @@
   display: flex;
   width: 100%;
 
-  .video__thumbnail {
+  &_thumbnail {
     padding-right: 1.5rem;
     width: 10rem;
     height: auto;
   }
 
-  .video__info {
+  &__info {
     font-family: "avenir-regular";
     padding-top: 1rem;
   }
 
-  .video__title {
+  &__title {
     font-family: "avenir-demi";
     font-size: 1rem;
     margin-bottom: 0.5rem;
