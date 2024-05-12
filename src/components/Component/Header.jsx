@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import avatar from '../../assets/images/Mohan-muruge.jpg'; 
 import logo from '../../BrainFlix-logo.svg'; 
 import upload from '../../assets/images/Icons/upload.svg';
@@ -17,10 +18,12 @@ function Header() {
         <div className="header__avatar">
             <img src={avatar} alt="Avatar" className="header__avatar-image" />
         </div>
-        </div>
-        <div className="header__upload">
-            <img src={upload} alt="Upload" className="header__upload-icon" />
-            UPLOAD
+      </div>
+      <div className="header__upload">
+        <Link to="/upload"> 
+          <img src={upload} alt="Upload" className="header__upload-icon" />
+          UPLOAD
+        </Link>
       </div>
     </header>
   );

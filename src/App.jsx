@@ -1,50 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import DisplayVideos from './components/Component/DisplayVideo.jsx';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import MainVideo from './components/Component/MainVideo.jsx';
+import VideoUpload from './pages/upload.jsx';
 import Header from './components/Component/Header.jsx';
-import Comments from './components/Component/Comments.jsx';
-import './App.scss';
-import { fetchVideos, fetchVideoData } from './brainflix-api.jsx';
 
 function App() {
-  const [videos, setVideos] = useState([]);
-  const [mainVideoId, setMainVideoId] = useState(null);
-  const [mainVideo, setMainVideo] = useState(null);
-
-  useEffect(() => {
-    const getVideos = async () => {
-      const videoList = await fetchVideos();
-      setVideos(videoList);
-      if (videoList.length > 0) {
-        setMainVideoId(videoList[0].id); 
-      }
-    };
-    
-    getVideos();
-  }, []);
-
-  useEffect(() => {
-    const getMainVideo = async () => {
-      if (mainVideoId) {
-        const videoData = await fetchVideoData(mainVideoId);
-        setMainVideo(videoData);
-      }
-    };
-    
-    getMainVideo();
-  }, [mainVideoId]);
-
-  const handleVideoClick = (videoId) => {
-    setMainVideoId(videoId);
-  };
-
   return (
-    <div className="app">
+    <Router>
       <Header />
-      <MainVideo video={mainVideo} />
-      <Comments comments={mainVideo.comments}/>
-      <DisplayVideos videos={videos} handleVideoClick={handleVideoClick} />
-    </div>
+      <Routes>
+        <Route path="/" element={<MainVideo />} /> 
+        <Route path="/videos/:id" element={<MainVideo />} />
+        <Route path="/upload" element={<VideoUpload />} />
+      </Routes>
+    </Router>
   );
 }
 

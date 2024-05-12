@@ -55,10 +55,16 @@
     padding-top: 0.8rem;
     padding-bottom: 0.7rem;
     margin-top: 0.5rem;
+    text-decoration: none;
+  }
+
+  a {
+    text-decoration: none;
   }
   &__upload-icon {
     width: 1.5rem;
     background-color: $brainflix-blue;
+    text-decoration: none;
   }
 
   @include tablet {

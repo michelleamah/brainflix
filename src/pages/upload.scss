@@ -1,0 +1,65 @@
+@use "../styles/partials/_fonts.scss" as *;
+@use "../styles/partials/_variables.scss" as *;
+@use "../styles/partials/_mixins.scss" as *;
+
+.upload {
+    padding: 1.27rem;
+    width: 100%;
+    max-width: 37rem;
+    margin: 1.25rem auto;
+    font-family: 'avenir-regular';
+    border-top: 0.063rem solid $mercury;
+
+    &__thumbnail {
+        height: auto;
+        width: 100%;
+        border-radius: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    &__title {
+        font-family: 'avenir-bold';
+        padding-bottom: 1rem;
+    }
+
+    &__label {
+        font-family: 'avenir-demi';
+        color: $silver;
+    }
+
+    &__button {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 1rem;
+    }
+
+    &__publish {
+        border-radius: 0.25rem;
+        background-color: $brainflix-blue;
+        border: none;
+        color: $white;
+        padding: 0.625rem 1.25rem;
+        font-family: 'avenir-demi';
+    }
+
+    &__cancel {
+        color: $brainflix-blue;
+        padding: 0.625rem 1.25rem;
+        background-color: $white;
+        font-family: 'avenir-demi';
+        border: none;
+    }
+
+    &__form {
+    display: flex;
+      flex-direction: column;
+    }
+
+    &__input {
+        padding: 0.625rem;
+        margin-bottom: 0.625rem;
+        border: 0.063rem solid $mercury;
+        border-radius: 0.25rem;
+    }
+
+  }
