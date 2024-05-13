@@ -60,6 +60,9 @@
 
   a {
     text-decoration: none;
+    color: $white;
+    display: flex;
+    justify-content: center;
   }
   &__upload-icon {
     width: 1.5rem;

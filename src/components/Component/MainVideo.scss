@@ -4,37 +4,113 @@
 
 .main {
   font-family: 'avenir-regular';
+
   &__video {
     width: 100%;
     max-height: auto;
+
+    @include tablet {
+      width: 90%;
+      display: flex;
+      margin-left: 2rem;
+      margin-right: 2rem;
+      margin: 0 auto;
+    }
+
+    @include desktop {
+      width: 70%;
+      margin: 0 auto;
+    }
   }
 
   &__title, &__channel {
     margin: 0.5rem 0;
-    font-family: 'avenir-demi';
-    padding-left: 1rem;
+    font-family: 'avenir-bold';
     padding-right: 1rem;
+    padding-top: 1rem;
+    margin-left: 2rem;
+  }
+
+  &__channel {
+    font-family: 'avenir-demi';
+  }
+
+  &__stats {
+    display: flex;
+    align-content: center;
+  }
+
+  &__subtitle {
+    font-size: 1rem;
+    font-family: 'avenir-demi';
+  }
+
+  &__details {
+    display: flex;
+    color: $silver;
+  }
+
+  &__icon {
+    padding-left: 1rem;
+    padding-right: 0.5rem;
+  }
+
+  &__date {
+    color: $silver;
+    padding-left: 1rem;
   }
 
   &__description {
-    padding-left: 1rem;
     padding-right: 1rem;
+    margin-left: 2rem;
+    border-top: 0.0625rem solid $mercury;
+    padding-top: 1rem;
   }
 
   &__comments {
     margin-top: 2rem;
-    padding-left: 1rem;
     padding-right: 1rem;
+    margin-left: 2rem;
+  }
+
+  &__commentdate {
+        padding-left: 1rem;
+        text-align: right;
+        margin-left: auto;
+        color: $silver;
+
   }
 
     &__border {
       padding: 0.5rem;
-      border-bottom: 1px solid #ccc;
+      border-bottom: 0.0625rem solid $mercury;
+      display: flex;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      border-top: 0.0625rem solid $mercury;
     }
 
     &__name, &__comment {
     padding-left: 1rem;
     padding-right: 1rem;
+    }
+
+    &__name {
+      font-family: 'avenir-demi';
+      margin-top: -2rem;
+      }
+
+    &__avatar {
+      background-color: $mercury;
+        border-radius: 3rem;
+        height: 3rem;
+        width: 3rem;
+        flex: 0 0 3rem;
+    }
+    &__desktop {
+      @include desktop {
+        width: 55%;
+      }
     }
 }
 
@@ -45,22 +121,124 @@
   padding-left: 1rem;
   padding-right: 1rem;
 
+  @include desktop {
+    width: 50%;
+    margin-left: auto;
+    margin-right: -7rem;
+    margin-top: -58rem;
+    border-left: 0.0625rem solid $mercury;
+  }
+
+  &__text {
+    font-family: 'avenir-demi';
+    color: $silver;
+  }
+
   &__image {
-    width: 15rem;
+      width: 15rem;
       height: auto;
-      border-radius: 1rem;
+      border-radius: 0.3rem;
       margin-right: 1rem;
       padding-bottom: 1rem;
+      @include desktop {
+      width: 10rem;
+      }
   }
 
   &__title {
     margin: 0;
+    @include desktop {
+    font-size: 1rem;
+    border-radius: inherit;
+    }
   }
 
   a {
     display: flex;
     text-decoration: none;
-    color: black;
+    color: $brainflix-black;
 
+  }
+}
+    .comments {
+      padding: 1rem;
+      font-family: "avenir-demi";
+      color: $silver;
+
+      &__avatar {
+        border-radius: 3rem;
+        height: 3rem;
+        width: 3rem;
+        flex: 0 0 3rem;
+      }
+
+      &__label {
+        padding-left: 1rem;
+      }
+      &__format {
+        display: flex;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
+
+      &__form {
+        padding-left: 1rem;
+        @include tablet {
+          display: flex;
+        }
+      }
+
+      &__text {
+        resize: none;
+        width: 100%;
+        font-family: 'avenir-regular';
+        padding-bottom: 3rem;
+        border: solid $mercury;
+        border-radius: 0.3rem;
+        background-color: $alabaster;
+        color: $brainflix-darkblack;
+
+        @include tablet {
+          padding: 0;
+          margin-right: 1rem;
+          padding-right: 50vw;
+          padding-left: 1rem;
+          width: 100%;
+        }
+
+        @include desktop {
+          padding: 0;
+          padding-right: 20vw;
+
+        }
+      }
+    }
+
+.button {
+  display: flex;
+  background-color: $brainflix-blue;
+  align-items: center;
+  border-radius: 0.2rem;
+  width: 75vw;
+  justify-content: center;
+  margin-top: 1rem;
+
+  @include tablet {
+    padding: 0;
+    margin: 0;
+    width: auto;
+    padding-right: 1rem;
+  }
+
+  &__icon {
+    padding: 1rem;
+  }
+
+  &__text {
+    border: none;
+    font-family: "avenir-demi";
+  color: $white;
+  background-color: $brainflix-blue;
+  font-size: 1rem;
   }
 }

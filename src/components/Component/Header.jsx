@@ -9,7 +9,9 @@ function Header() {
   return (
     <header className="header">
       <div className="header__logo">
+      <Link to="/" className="header__logo">
         <img src={logo} alt="Logo" className="header__logo-image" />
+        </Link>
       </div>
       <div className="header__flex-container">
         <div className="header__search">
