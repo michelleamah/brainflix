@@ -15,7 +15,7 @@ function Header() {
       </div>
       <div className="header__flex-container">
         <div className="header__search">
-            <input type="text" placeholder="Search" className="header__search-input" />
+            <input type="text" placeholder="    Search" className="header__search-input" />
         </div>
         <div className="header__avatar">
             <img src={avatar} alt="Avatar" className="header__avatar-image" />
