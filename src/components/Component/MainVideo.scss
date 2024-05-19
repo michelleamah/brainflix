@@ -47,7 +47,7 @@
 
   &__details {
     display: flex;
-    color: $silver;
+    color: $subheading;
   }
 
   &__icon {
@@ -56,14 +56,14 @@
   }
 
   &__date {
-    color: $silver;
+    color: $subheading;
     padding-left: 1rem;
   }
 
   &__description {
     padding-right: 1rem;
     margin-left: 2rem;
-    border-top: 0.0625rem solid $mercury;
+    border-top: 0.0625rem solid $secondary-subheading;
     padding-top: 1rem;
   }
 
@@ -77,17 +77,17 @@
         padding-left: 1rem;
         text-align: right;
         margin-left: auto;
-        color: $silver;
+        color: $subheading;
 
   }
 
     &__border {
       padding: 0.5rem;
-      border-bottom: 0.0625rem solid $mercury;
+      border-bottom: 0.0625rem solid $secondary-subheading;
       display: flex;
       padding-top: 1rem;
       padding-bottom: 1rem;
-      border-top: 0.0625rem solid $mercury;
+      border-top: 0.0625rem solid $secondary-subheading;
     }
 
     &__name, &__comment {
@@ -101,7 +101,7 @@
       }
 
     &__avatar {
-      background-color: $mercury;
+      background-color: $secondary-subheading;
         border-radius: 3rem;
         height: 3rem;
         width: 3rem;
@@ -124,14 +124,14 @@
   @include desktop {
     position: absolute;
     right: 12rem;
-    top: 40rem;
+    top: 38rem;
     width: 25%; 
-    border-left: 0.0625rem solid $mercury;
+    border-left: 0.0625rem solid $secondary-subheading;
   }
 
   &__text {
     font-family: 'avenir-demi';
-    color: $silver;
+    color: $subheading;
   }
 
   &__image {
@@ -156,14 +156,14 @@
   a {
     display: flex;
     text-decoration: none;
-    color: $brainflix-black;
+    color: $primary-color;
 
   }
 }
     .comments {
       padding: 1rem;
       font-family: "avenir-demi";
-      color: $silver;
+      color: $subheading;
 
       &__avatar {
         border-radius: 3rem;
@@ -193,10 +193,10 @@
         width: 100%;
         font-family: 'avenir-regular';
         padding-bottom: 3rem;
-        border: solid $mercury;
+        border: solid $secondary-subheading;
         border-radius: 0.3rem;
-        background-color: $alabaster;
-        color: $brainflix-darkblack;
+        background-color: $secondary-background;
+        color: $secondary-color;
 
         @include tablet {
           padding: 0;
@@ -216,7 +216,7 @@
 
 .button {
   display: flex;
-  background-color: $brainflix-blue;
+  background-color: $primary-accent;
   align-items: center;
   border-radius: 0.2rem;
   width: 75vw;
@@ -237,8 +237,8 @@
   &__text {
     border: none;
     font-family: "avenir-demi";
-  color: $white;
-  background-color: $brainflix-blue;
+  color: $background;
+  background-color: $primary-accent;
   font-size: 1rem;
   }
 }

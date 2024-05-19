@@ -8,10 +8,10 @@
     max-width: 37rem;
     margin: 1.25rem auto;
     font-family: 'avenir-regular';
-    border-top: 0.063rem solid $mercury;
+    border-top: 0.063rem solid $secondary-subheading;
 
     @include tablet {
-        border-top: 0.063rem solid $white;
+        border-top: 0.063rem solid $background;
         max-width: 85%;
     }
 
@@ -42,13 +42,13 @@
         padding-bottom: 1rem;
 
         @include tablet {
-            border-bottom: 0.063rem solid $mercury;
+            border-bottom: 0.063rem solid $secondary-subheading;
         }
     }
 
     &__label {
         font-family: 'avenir-demi';
-        color: $silver;
+        color: $subheading;
     }
 
     &__button {
@@ -56,20 +56,20 @@
         flex-direction: column;
         padding-top: 1rem;
         @include tablet {
-        border-top: 0.063rem solid $mercury;
+        border-top: 0.063rem solid $secondary-subheading;
         justify-content: flex-end;
         flex-direction: row;
         }
         @include desktop {
-            border-top: 0.063rem solid $white;
+            border-top: 0.063rem solid $background;
             }
     }
 
     &__publish {
         border-radius: 0.25rem;
-        background-color: $brainflix-blue;
+        background-color: $primary-accent;
         border: none;
-        color: $white;
+        color: $background;
         padding: 0.625rem 1.25rem;
         font-family: 'avenir-demi';
         display: flex;
@@ -78,9 +78,9 @@
     }
 
     &__cancel {
-        color: $brainflix-blue;
+        color: $primary-accent;
         padding: 0.625rem 1.25rem;
-        background-color: $white;
+        background-color: $background;
         font-family: 'avenir-demi';
         border: none;
     }
@@ -97,9 +97,9 @@
     &__input, &__description {
         padding: 0.625rem;
         margin-bottom: 0.625rem;
-        border: 0.063rem solid $mercury;
+        border: 0.063rem solid $secondary-subheading;
         border-radius: 0.25rem;
-        background-color: $alabaster;
+        background-color: $secondary-background;
         font-family: 'avenir-regular';
     }
 

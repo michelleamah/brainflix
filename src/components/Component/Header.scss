@@ -5,7 +5,7 @@
 .header {
   align-items: center;
   padding: 1rem;
-  background-color: $white;
+  background-color: $background;
   font-family: "avenir-regular";
   margin-left: 0.5rem;
   margin-right: 0.5rem;
@@ -38,19 +38,19 @@
   &__search-input {
     padding: 0.5rem;
     margin-right: 0.5rem;
-    border: 0.1rem solid $mercury;
-    background-color: $alabaster;
+    border: 0.1rem solid $secondary-subheading;
+    background-color: $secondary-background;
     border-radius: 0.3rem;
     width: 100%;
     padding-right: 5rem;
   }
 
   &__upload {
-    color: $white;
+    color: $background;
     font-family: "avenir-demi";
     display: flex;
     justify-content: center;
-    background-color: $brainflix-blue;
+    background-color: $primary-accent;
     border-radius: 0.4rem;
     padding-top: 0.8rem;
     padding-bottom: 0.7rem;
@@ -60,13 +60,13 @@
 
   a {
     text-decoration: none;
-    color: $white;
+    color: $background;
     display: flex;
     justify-content: center;
   }
   &__upload-icon {
     width: 1.5rem;
-    background-color: $brainflix-blue;
+    background-color: $primary-accent;
     text-decoration: none;
   }
 
@@ -96,10 +96,10 @@
     }
 
     &__upload-icon {
-      background-color: $brainflix-blue;
+      background-color: $primary-accent;
     }
     &__upload-text {
-      background-color: $brainflix-blue;
+      background-color: $primary-accent;
     }
   }
   @include desktop {

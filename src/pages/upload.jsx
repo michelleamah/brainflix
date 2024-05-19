@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom'; 
-import './upload.scss';
+import './Upload.scss';
 import thumbnail from '../assets/images/Upload-video-preview.jpg';
 import publishicon from '../assets/images/Icons/publish.svg';
 

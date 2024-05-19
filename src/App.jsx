@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import MainVideo from './components/Component/MainVideo.jsx';
-import VideoUpload from './pages/upload.jsx';
+import VideoUpload from './pages/Upload.jsx';
 import Header from './components/Component/Header.jsx';
 
 function App() {
