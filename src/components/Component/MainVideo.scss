@@ -122,10 +122,10 @@
   padding-right: 1rem;
 
   @include desktop {
-    width: 50%;
-    margin-left: auto;
-    margin-right: -7rem;
-    margin-top: -58rem;
+    position: absolute;
+    right: 12rem;
+    top: 40rem;
+    width: 25%; 
     border-left: 0.0625rem solid $mercury;
   }
 

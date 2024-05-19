@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom'; 
 import './upload.scss';
 import thumbnail from '../assets/images/Upload-video-preview.jpg';
 import publishicon from '../assets/images/Icons/publish.svg';
@@ -7,6 +8,7 @@ import publishicon from '../assets/images/Icons/publish.svg';
 function VideoUpload() {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
+  const navigate = useNavigate(); 
 
   const handlePublish = async () => {
     try {
@@ -19,7 +21,7 @@ function VideoUpload() {
 
       alert('Video has been successfully published.');
       setTimeout(() => {
-        window.location.href = '/'; 
+        navigate('/');
       }, 1000);
     } catch (error) {
       console.error('Error publishing video:', error);
@@ -28,7 +30,7 @@ function VideoUpload() {
   };
 
   const handleCancel = () => {
-    window.location.href = '/'; 
+    navigate('/');
   };
 
   return (
@@ -62,7 +64,7 @@ function VideoUpload() {
           onChange={(e) => setDescription(e.target.value)}
         />
         <div className="upload__button">
-          <button className="upload__publish" type="button" onClick={handlePublish}>
+          <button className="upload__publish" type="submit" onClick={handlePublish}>
             <img src={publishicon} alt="Publish" className="upload__icon"/>
             PUBLISH
           </button>

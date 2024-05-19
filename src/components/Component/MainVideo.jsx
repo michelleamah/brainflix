@@ -11,42 +11,27 @@ function MainVideo() {
   const { id } = useParams();
   const [mainVideo, setMainVideo] = useState(null);
   const [videoData, setVideoData] = useState([]);
-  const [newComment, setNewComment] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const videosResponse = await axios.get('http://localhost:3000/videos');
-        setVideoData(videosResponse.data);
+        if (videoData.length === 0) {
+          const videosResponse = await axios.get('http://localhost:3000/videos');
+          setVideoData(videosResponse.data);
+        }
 
-        const videoId = id || videosResponse.data[0].id;
+        const videoId = id || videoData[0].id;
         const mainVideoResponse = await axios.get(`http://localhost:3000/videos/${videoId}`);
         setMainVideo(mainVideoResponse.data);
+
+        window.scrollTo(0, 0);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
     };
 
     fetchData();
-  }, [id]);
-
-  const handleCommentSubmit = async (event) => {
-    event.preventDefault();
-    try {
-      const comment = {
-        name: "User", // Placeholder name
-        comment: newComment,
-        timestamp: Date.now()
-      };
-
-      await axios.post(`http://localhost:3000/videos/${mainVideo.id}/comments`, comment);
-      const mainVideoResponse = await axios.get(`http://localhost:3000/videos/${mainVideo.id}`);
-      setMainVideo(mainVideoResponse.data);
-      setNewComment('');
-    } catch (error) {
-      console.error('Error posting comment:', error);
-    }
-  };
+  }, [id, videoData]);
 
   return (
     <div>
@@ -77,14 +62,12 @@ function MainVideo() {
                   <img className="comments__avatar" src={avatar} alt="avatar" />
                   <div className="comments__flex">
                     <label className="comments__label" htmlFor="commentText">JOIN THE CONVERSATION</label>
-                    <form className="comments__form" onSubmit={handleCommentSubmit}>
+                    <form className="comments__form">
                       <textarea
                         id="commentText"
                         name="commentText"
                         className="comments__text"
                         placeholder="Add a new comment"
-                        value={newComment}
-                        onChange={(e) => setNewComment(e.target.value)}
                       ></textarea>
                       <div className="button">
                         <img
