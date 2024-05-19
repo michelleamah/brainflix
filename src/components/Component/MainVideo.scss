@@ -124,7 +124,7 @@
   @include desktop {
     position: absolute;
     right: 12rem;
-    top: 38rem;
+    top: 39rem;
     width: 25%; 
     border-left: 0.0625rem solid $secondary-subheading;
   }
@@ -240,5 +240,13 @@
   color: $background;
   background-color: $primary-accent;
   font-size: 1rem;
+  &:hover {
+    background-color: $secondary-accent;
   }
+}
+
+  &:hover {
+    background-color: $secondary-accent;
+  }
+
 }
